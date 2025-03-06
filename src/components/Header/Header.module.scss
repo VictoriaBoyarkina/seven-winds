@@ -1,0 +1,47 @@
+@use '@colors' as colors;
+
+.header {
+  display: flex;
+  align-items: center;
+
+  .navigation {
+    height: min-content;
+    background-color: colors.$black02;
+    justify-content: start;
+    padding: 0 20px;
+    gap: 20px;
+
+    .navigationAction {
+      min-width: 24px;
+      max-width: 24px;
+      color: colors.$gray01;
+
+      &:global(.Mui-selected) {
+        color: colors.$gray01;
+      }
+    }
+  }
+
+  .tabs {
+    min-height: 44px;
+    height: 44px;
+
+    :global(.MuiTabs-indicator) {
+      background-color: colors.$white01;
+    }
+
+    .tab {
+      text-transform: none;
+      font-weight: 400;
+      color: colors.$gray01;
+      padding: 12px 4px;
+      margin-right: 20px;
+      min-width: 0;
+      min-height: 43px;
+
+      &:global(.Mui-selected) {
+        color: colors.$white01;
+      }
+    }
+  }
+}
