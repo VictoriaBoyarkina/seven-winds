@@ -5,6 +5,7 @@ import Sidebar from '../Sidebar';
 import Typography from '@/ui/Typography';
 import styles from './Layout.module.scss';
 import Divider from '@/ui/Divider';
+import Table from '@/ui/Table';
 
 const Layout: FC = () => {
   return (
@@ -22,7 +23,9 @@ const Layout: FC = () => {
             <Divider orientation="vertical" flexItem />
           </Box>
           <Divider flexItem />
-          <Box className={styles.table}></Box>
+          <Box className={styles.table}>
+            <Table />
+          </Box>
         </Box>
       </Box>
     </Box>

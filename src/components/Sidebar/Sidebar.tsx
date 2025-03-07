@@ -7,8 +7,8 @@ import { Box, Button } from '@mui/material';
 import Typography from '@/ui/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Divider from '@/ui/Divider';
-import { PROJECTS } from '@/utils/constants';
 import styles from './Sidebar.module.scss';
+import { PROJECTS } from '@/utils/constants';
 
 const Sidebar: FC = () => {
   const [isOpen, setIsOpen] = useState(true);
