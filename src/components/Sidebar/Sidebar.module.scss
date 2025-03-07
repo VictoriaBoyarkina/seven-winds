@@ -1,0 +1,43 @@
+@use '@colors' as colors;
+
+.sidebar {
+  height: 100%;
+  min-width: 234px;
+
+  .button {
+    width: 100%;
+    color: colors.$white01;
+    border-radius: 0;
+    text-transform: none;
+    padding: 8px 7px 8px 20px;
+    justify-content: space-between;
+
+    .buttonContent {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      color: colors.$gray01;
+    }
+  }
+
+  .list {
+    padding: 0;
+    width: 100%;
+
+    .listItem {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 5px 20px;
+
+      &:global(.MuiListItemButton-root) {
+        &:global(.Mui-selected) {
+          background-color: colors.$gray01;
+          &:hover {
+            background-color: colors.$gray01;
+          }
+        }
+      }
+    }
+  }
+}

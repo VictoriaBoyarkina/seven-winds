@@ -1,0 +1,61 @@
+@use '@colors' as colors;
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  color: colors.$white01;
+}

@@ -1,0 +1,29 @@
+@use '@colors' as colors;
+
+.layout {
+  min-height: 100vh;
+  height: 100vh;
+  max-width: 100vw;
+  background-color: colors.$black02;
+  display: flex;
+  flex-direction: column;
+
+  .body {
+    display: flex;
+    flex-grow: 1;
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .tableTitle {
+        padding: 10px 16px;
+      }
+
+      .table {
+        flex-grow: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@use '@colors' as colors;
+
+.container {
+  padding: 0 12px;
+  height: 100%;
+  color: colors.$white01;
+  background-color: colors.$black01;
+
+  .table {
+    border: none;
+    border-radius: 0;
+
+    :global(.MuiDataGrid-row--editing) {
+      box-shadow: none;
+      :global(.MuiDataGrid-cell) {
+        background-color: transparent;
+        outline: none;
+      }
+
+      :global(.MuiDataGrid-cell--editing) {
+        padding: 10px;
+        input {
+          height: 36px;
+          border-radius: 6px;
+          border: 1px solid colors.$black03;
+          color: colors.$gray03;
+        }
+
+        &:focus-within {
+          outline: none;
+        }
+      }
+    }
+
+    :global(.MuiDataGrid-columnHeaders) {
+      :global(.MuiDataGrid-row--borderBottom) {
+        background-color: transparent;
+        color: colors.$white01;
+        border-bottom-color: colors.$gray01;
+      }
+
+      :global(.MuiDataGrid-columnHeader) {
+        outline: none;
+        text-align: start;
+        border-bottom-color: colors.$black03;
+
+        &:focus {
+          outline: none;
+        }
+
+        :global(.MuiDataGrid-columnHeaderTitleContainer) {
+          flex-direction: row;
+
+          :global(.MuiDataGrid-columnHeaderTitle) {
+            color: colors.$gray01;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    :global(.MuiDataGrid-columnSeparator) {
+      display: none;
+    }
+
+    :global(.MuiDataGrid-cell) {
+      text-align: start;
+      color: colors.$white01;
+      font-weight: 400;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  :global(.MuiDataGrid-filler) {
+    & > div {
+      border-top: none;
+    }
+  }
+
+  .iconsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    div {
+      display: flex;
+      height: 28px;
+      width: 54px;
+      justify-content: center;
+      align-items: center;
+      background-color: colors.$black03;
+      border-radius: 6px;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+}
